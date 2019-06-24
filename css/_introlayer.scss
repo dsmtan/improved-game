@@ -1,0 +1,155 @@
+.layer--intro {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: $navy;
+  text-align: center;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.h1--gamename {
+  position: absolute;
+  top: 40vh;
+  width: 100vw;
+  opacity: 0;
+  font-size: 2.5em;
+  font-family: $headerfont;
+  font-weight: 100;
+  color: white;
+  z-index: 51;
+}
+
+.animateName {
+  animation: headlineAppear 2.8s ease-in-out forwards;
+  animation-delay: 2.1s;
+}
+
+@keyframes headlineAppear {
+  100% {
+    opacity: 1;
+  }
+}
+
+#logo {
+  animation: logo 1.8s alternate forwards;
+}
+
+@keyframes logo {
+  0% {
+    transform: rotate(0deg), scale(8);
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  5% {
+    transform: rotate(360deg);
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  6% {
+    transform: rotate(0deg);
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+}
+
+@mixin play_button {
+  color: $white;
+  padding: 5px 30px;
+  background-color: $gold;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: $bodyfont;
+  font-weight: 300;
+  border: none;
+  position: absolute;
+  bottom: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 51;
+}
+
+.play_button {
+  @include play_button;
+}
+
+#playBtn {
+  opacity: 0;
+}
+
+.animateBtn {
+  animation: appearSVG 2.1s forwards 2.2s;
+}
+
+#horse1 {
+  opacity: 0;
+  animation: appearSVG 5s forwards;
+  animation-delay: 0.7s;
+}
+
+#person1 {
+  opacity: 0;
+  animation: appearSVG 5s forwards;
+  animation-delay: 0.7s;
+}
+
+#horse2 {
+  opacity: 0;
+  animation: appearSVG 5s forwards;
+  animation-delay: 1.5s;
+}
+
+#person2 {
+  opacity: 0;
+  animation: appearSVG 5s forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes appearSVG {
+  100% {
+    opacity: 1;
+  }
+}
+
+#horseline {
+  path {
+    opacity: 0;
+    fill: none;
+    stroke: $white;
+    animation: horseDraw 3.5s alternate forwards ease-in-out;
+    animation-delay: 1.5s;
+    stroke-miterlimit: 5;
+    stroke-dasharray: 300;
+    stroke: $white;
+  }
+  polygon {
+    opacity: 0;
+    animation: horseDraw 3.5s alternate forwards ease-in-out;
+    animation-delay: 1.5s;
+    stroke-miterlimit: 5;
+    stroke-dasharray: 300;
+    stroke: $white;
+  }
+}
+
+@keyframes horseDraw {
+  0% {
+    stroke-dashoffset: 300;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}

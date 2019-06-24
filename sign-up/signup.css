@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+td,
+th {
+  padding: 1em 2em 1em 2em;
+  text-align: center;
+}
+
+.logo {
+  background-color: #121f29;
+  width: 100%;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.dice {
+  width: 16vw;
+}
+.wrapper {
+  margin-right: 1em;
+}
+
+.hello {
+  margin-top: 4em;
+  font-size: 20px;
+}
+
+.hello span {
+  color: #dc5f11;
+  font-size: 45px;
+  padding-bottom: 1em;
+  font-weight: 700;
+}
+
+input {
+  border-radius: 2em;
+  border: #cacaca 1px solid;
+  margin-top: 0.5em;
+  font-size: 23px;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+input:focus {
+  border-radius: 2em;
+  border: #d69b3a 1px solid;
+}
+
+form {
+  margin-top: 2.5em;
+  font-size: 20px;
+}
+
+.signup1,
+.signup2 {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.signup1 input {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+button {
+  background-color: #d69b3a;
+  color: #fff;
+  border-radius: 2.5em;
+  font-size: 30px;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  width: 6em;
+  margin-bottom: 3em;
+}
+
+.but {
+  text-align: center;
+}
+
+.signup2 input {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+#arrow {
+  position: absolute;
+  color: white;
+  font-size: 45px;
+  top: 4vh;
+  left: 5vw;
+  margin-bottom: 2em;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.box {
+  border-radius: 2.5em;
+  border: solid 1px #cacaca;
+
+  padding: 0.5em;
+  width: 6em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+input[type="radio"]:checked + .box {
+  background-color: #cacaca;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2.75em;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 2em;
+}
+
+#signup {
+  background-color: #d69b3a;
+  color: #fff;
+  border-radius: 2.5em;
+  font-size: 25px;
+  width: 7em;
+  height: 2.5em;
+}
+
+.sign {
+  text-align: center;
+}
+
+.signup2 {
+  display: none;
+}
+
+#message {
+  display: none;
+  background: #fcfcfc;
+  color: #000;
+  position: relative;
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+#message p {
+  font-size: 15px;
+  padding-left: 2em;
+}
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔️";
+}
+
+.invalid {
+  color: #dc5f11;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖️";
+}
+
+@media all and (max-width: 375px) {
+  .grid1 {
+    grid-gap: 1em;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .box {
+    width: 5.5em;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .box {
+    width: 4.5em;
+  }
+}

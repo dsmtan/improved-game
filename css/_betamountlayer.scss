@@ -1,0 +1,98 @@
+.layer--betamount {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: $navy;
+  text-align: center;
+  transition: width 0.8s 0.2s;
+  overflow: hidden;
+  z-index: 25;
+}
+
+.div--betrange {
+  width: 100vw;
+  height: calc(100vh - 6.8em);
+  margin-top: 2em;
+}
+
+.minmaxrange {
+  display: inline-block;
+  width: 41px;
+  color: white;
+  margin: -5px 5px 0 9px;
+  text-align: right;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 500px;
+  height: 2px;
+  border-radius: 5px;
+  background: white;
+  outline: none;
+  margin: 0;
+  margin-top: 2.5em;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 40px;
+  border-radius: 15px;
+  background: #d69b3a;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 40px;
+  border-radius: 15px;
+  background: #d69b3a;
+  cursor: pointer;
+}
+
+.rs-label {
+  position: relative;
+  transform-origin: center center;
+  display: block;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  padding-top: 22px;
+  border: 2px solid #fff;
+  margin-top: 20px;
+  margin-left: -27px;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.div--risk {
+  margin: 18px auto 0;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+  color: $gold;
+}
+
+#playBtn3 {
+  bottom: 20px;
+  font-size: 1.3em;
+}
+
+.disappear {
+  width: 0;
+  transition: width 0.8s 0.2s;
+
+  & * {
+    transition: 0.6s 0.2s;
+    opacity: 0;
+  }
+}

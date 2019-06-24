@@ -1,0 +1,65 @@
+@media screen and (orientation: portrait) {
+  .layer--portrait {
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: $navy;
+    text-align: center;
+    overflow: hidden;
+    z-index: 60;
+  }
+
+  #phone {
+    animation: rotatePhone 2s ease-out infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  @keyframes rotatePhone {
+    40% {
+      transform: rotate(90deg);
+    }
+
+    70% {
+      transform: rotate(90deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  #portraittext {
+    text {
+      font-family: $bodyfont;
+      fill: white;
+      text-align: center;
+      font-size: 0.8em;
+      font-weight: 100;
+    }
+  }
+
+  #horseportrait {
+    opacity: 1;
+
+    path {
+      opacity: 1;
+      fill: none;
+      stroke: $white;
+      stroke-miterlimit: 5;
+      stroke-dasharray: 300;
+      stroke: $white;
+      stroke-dashoffset: 0;
+    }
+    polygon {
+      opacity: 1;
+      stroke-miterlimit: 5;
+      stroke-dasharray: 300;
+      stroke: $white;
+      stroke-dashoffset: 0;
+    }
+  }
+}

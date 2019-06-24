@@ -1,0 +1,78 @@
+// give betting layer z-index of 30 (z-index only works when you give a position to the element like absolute, relative, fixed)
+
+.layer--betting {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  background-color: $navy;
+  text-align: center;
+  transition: width 0.8s 0.2s;
+  overflow: hidden;
+  z-index: 30;
+}
+
+.div--horsegrid {
+  position: absolute;
+  bottom: 0%;
+  width: 100vw;
+  height: calc(100vh - 6.8em);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  z-index: 31;
+}
+
+.article--horse {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 3px solid $gold;
+  }
+
+  h4 {
+    color: $navy;
+    margin: 0;
+    background-color: white;
+    font-size: 1em;
+    width: 100%;
+    padding: 3px;
+    font-weight: 500;
+  }
+}
+
+#horse {
+  &--green {
+    background-image: url("../images/bet--green.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 1em center;
+    background-size: auto 85%;
+  }
+
+  &--orange {
+    background-image: url("../images/bet--orange.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 1em center;
+    background-size: auto 85%;
+  }
+
+  &--red {
+    background-image: url("../images/bet--red.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 1em center;
+    background-size: auto 85%;
+  }
+
+  &--black {
+    background-image: url("../images/bet--black.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 1em center;
+    background-size: auto 85%;
+  }
+}

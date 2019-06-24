@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Horse Racing Game</title>
+  </head>
+  <body>
+    <div class="layer--portrait" id="portrait"></div>
+
+    <!-- INTRO LAYER -->
+    <div class="layer--intro">
+      <div id="svg_firstpage"></div>
+
+      <h1 class="h1--gamename">RACE TO SUCCESS</h1>
+      <button id="playBtn" class="play_button">Play</button>
+    </div>
+
+    <!-- INSTRUCTIONS LAYER -->
+
+    <div class="layer--instructions" id="instructions">
+      <section class="section--header">
+        <img class="img--horsehead" src="images/horseheader.svg" />
+        <h2>INSTRUCTIONS</h2>
+      </section>
+      <div class="div--grey">
+        <p><span class="stepNo">1</span> Pick the location of your race.</p>
+        <p><span class="stepNo">2</span> Pick your winning horse.</p>
+        <p><span class="stepNo">3</span> Click on your horse to help it win!</p>
+      </div>
+      <div id="pointerSVG"></div>
+      <button id="playBtn2" class="play_button">Continue</button>
+    </div>
+
+    <!-- LOCATIONS LAYER -->
+    <div class="layer--locations">
+      <section class="section--header">
+        <img class="img--horsehead" src="images/horseheader.svg" />
+        <h2>PICK A LOCATION</h2>
+      </section>
+      <div class="div--locationgrid">
+        <article class="article--location" id="location--1">
+          <h4 class="locationname">Hamilton Park (UK)</h4>
+        </article>
+        <article class="article--location" id="location--2">
+          <h4 class="locationname">Aalborg (DK)</h4>
+        </article>
+        <article class="article--location" id="location--3">
+          <h4 class="locationname">Meydan (UAE)</h4>
+        </article>
+        <article class="article--location" id="location--4">
+          <h4 class="locationname">Freehold Raceway (USA)</h4>
+        </article>
+      </div>
+    </div>
+
+    <!-- BETTING LAYER -->
+    <div class="layer--betting">
+      <section class="section--header">
+        <img class="img--horsehead" src="images/horseheader.svg" />
+        <h2>PICK YOUR WINNER</h2>
+      </section>
+      <div class="div--horsegrid">
+        <article class="article--horse" id="horse--green">
+          <h4 class="horsename">Jolly</h4>
+        </article>
+        <article class="article--horse" id="horse--orange">
+          <h4 class="horsename">Skippy</h4>
+        </article>
+        <article class="article--horse" id="horse--red">
+          <h4 class="horsename">Goldy</h4>
+        </article>
+        <article class="article--horse" id="horse--black">
+          <h4 class="horsename">Speedy</h4>
+        </article>
+      </div>
+    </div>
+
+    <!-- BET AMOUNT LAYER -->
+    <div class="layer--betamount">
+      <section class="section--header">
+        <img class="img--horsehead" src="images/horseheader.svg" />
+        <h2>PLACE YOUR BET</h2>
+      </section>
+      <div class="div--betrange">
+        <div class="range-slider">
+          <span id="rs-bullet" class="rs-label">250</span>
+          <span class="minmaxrange">1kr</span>
+          <input
+            id="rs-range-line"
+            type="range"
+            min="1"
+            max="500"
+            value="250"
+            class="slider"
+            id="myRange"
+          /><span class="minmaxrange">500kr</span>
+        </div>
+        <div class="div--risk">
+          <span>Safe player</span><span>Risk taker</span>
+        </div>
+        <button id="playBtn3" class="play_button">Start Race</button>
+      </div>
+    </div>
+
+    <!-- GAME LAYER -->
+
+    <div class="layer--game">
+      <div class="div--countdown">
+        <p class="p--countdown">Ready?<br />You're in the bottom track!</p>
+      </div>
+
+      <div class="div--track track--1">
+        <div class="div--horse"></div>
+      </div>
+      <div class="div--track track--2">
+        <div class="div--horse"></div>
+      </div>
+      <div class="div--track track--3">
+        <div class="div--horse"></div>
+      </div>
+      <div class="div--track track--4">
+        <div class="div--horse" id="horse--user"></div>
+      </div>
+
+      <div class="div--finish"></div>
+    </div>
+
+    <!-- RANKING LAYER -->
+    <div class="layer--ranking">
+      <section class="section--header">
+        <img class="img--horsehead" src="images/horseheader.svg" />
+        <h2 id="resultheader">Nice try...</h2>
+      </section>
+      <div class="div--trophy"></div>
+
+      <div class="div--rankinggrid">
+        <p class="rankno">1</p>
+        <p class="rankno">2</p>
+        <p class="rankno">3</p>
+        <p class="rankno">4</p>
+        <p class="result" id="result1"></p>
+        <p class="result" id="result2"></p>
+        <p class="result" id="result3"></p>
+        <p class="result" id="result4"></p>
+      </div>
+
+      <p class="p--invite">
+        Maybe you'll do better when there's real money involved.
+      </p>
+
+      <button id="tryBtn" class="play_button">Try in real life</button>
+
+      <a class="a--practice" href=".">Practice more</a>
+    </div>
+
+    <script src="js/intro.js"></script>
+    <script src="js/game.js"></script>
+  </body>
+</html>

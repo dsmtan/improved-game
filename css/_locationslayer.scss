@@ -1,0 +1,94 @@
+// give locations layer z-index of 40 (z-index only works when you give a position to the element like absolute, relative, fixed)
+
+.layer--locations {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  transition: width 0.8s 0.2s;
+  background-color: $navy;
+  text-align: center;
+  z-index: 40;
+  overflow: hidden;
+}
+
+.section--header {
+  margin: 0 auto;
+
+  .img--horsehead {
+    max-height: 3.6em;
+  }
+
+  h2 {
+    font-family: $headerfont;
+    color: white;
+    font-size: 1.6em;
+    font-weight: 100;
+    margin: 0;
+  }
+}
+
+.div--locationgrid {
+  position: absolute;
+  bottom: 0%;
+  width: 100vw;
+  height: calc(100vh - 6.8em);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  z-index: 41;
+}
+
+.article--location {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 3px solid $gold;
+  }
+
+  h4 {
+    color: $navy;
+    margin: 0;
+    background-color: white;
+    width: 100%;
+    padding: 3px;
+    font-size: 1em;
+    font-weight: 500;
+  }
+}
+
+#location {
+  &--1 {
+    background-image: url("../images/location--1.svg");
+    background-size: 170%;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &--2 {
+    background-image: url("../images/location--2.svg");
+    background-size: 170%;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &--3 {
+    background-image: url("../images/location--3.svg");
+    background-size: 170%;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &--4 {
+    background-image: url("../images/location--4.svg");
+    background-size: 170%;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+}

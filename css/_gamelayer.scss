@@ -1,0 +1,82 @@
+// give game layer z-index of 20 (z-index only works when you give a position to the element like absolute, relative, fixed)
+
+.div--countdown {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 10.5em;
+  width: 10.5em;
+  border-radius: 50%;
+  background-color: white;
+  color: $navy;
+  font-size: 1.2em;
+  font-weight: 600;
+  border: 3px solid $gold;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  z-index: 21;
+  cursor: pointer;
+  @include flexCenter;
+}
+
+.layer--game {
+  position: relative;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 0;
+  padding-top: 23vh;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.div--track {
+  align-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.div--horse {
+  object-fit: contain;
+  max-height: 90%;
+  z-index: 21;
+  height: 63px;
+  width: 80.25px;
+
+  &.galloping {
+    animation: gallop 0.5s steps(4) infinite;
+  }
+}
+
+#horse--user {
+  cursor: pointer;
+}
+
+@keyframes gallop {
+  100% {
+    background-position: -321px 0px;
+  }
+}
+
+.div--finish {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  height: 100vh;
+  width: 15px;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.541);
+  z-index: 20;
+}
+
+.hide {
+  display: none;
+}

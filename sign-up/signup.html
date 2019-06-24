@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="signup.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body>
+      <div class="logo">
+          <img class="dice" src="dantotologo.png" alt="dantoto">
+        </div>
+    <div class="wrapper">
+   
+    <form>
+      <div class="signup1">
+          <p class="hello" > <span>Hello <br>
+          </span> we need some information to create an account
+          </p>
+    
+      
+
+        Email: <br />
+        <input type="email" name="email" placeholder="example@email.xx" /> <br />
+        Password: <br />
+        <input id="psw" type="password" name="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" /> <br />
+        <div id="message">
+            <h5>Password must contain the following:</h5>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+          </div>
+        <div class="but">
+        <button class="next">Next</button></div>
+        </div>
+      
+
+      <div class="signup2">
+          <i id="arrow" class="fas fa-long-arrow-alt-left"></i>
+      First name:<br />
+      <input type="text" name="name" /> <br />
+      Last name:<br />
+      <input id="sur" type="text" name="surname" /><br />
+      
+      <div class="grid1">
+          <label for="male">
+      <input id="male" class="gen" type="radio" name="gender" value="male" check= checked/> <div class="box">Male
+  </div>  </label>
+      <input id="female" type="radio" name="gender" value="female" />  <div class="box"> <label for="female"> Female<br /></label></div>
+    </div>
+      Address: <br />
+      <input type="text" name="address" /> <br />
+      <div class="grid2">
+ <div>   ZIP: <br />
+      <input type="number" name="zip" /> <br /></div>  
+   
+   <div>  City: <br />
+      <input type="text" name="city" /> <br />
+    </div>
+    </div>
+      Date of birth: <br />
+      <input type="date" name="birth" /> <br />
+    <div class="sign"> <input id="signup" type="submit" value="Sign Up" /></div> 
+    </form>
+  </div>
+</div>
+<script src="https://kit.fontawesome.com/c19c8d377a.js"></script>
+    <script src="signup.js"></script>
+  </body>
+</html>
