@@ -47,7 +47,7 @@ let rangeBullet = document.querySelector("#rs-bullet");
 
 rangeSlider.addEventListener("input", showSliderValue, false);
 
-//show dynamic input value in bullet label
+//show dynamic input value in bullet label that moves with the slider
 function showSliderValue() {
   rangeBullet.innerHTML = rangeSlider.value;
   let leftPosition = (window.screen.width - 500) / 2;
@@ -64,6 +64,8 @@ function storeBetAmount() {
   userChoices.bet = Number(rangeSlider.value);
   betAmountLayer.classList.add("disappear");
   prepareGame();
+
+  //final choices made by the user
   console.log(userChoices);
 }
 
@@ -146,6 +148,7 @@ function countDown() {
   countLoop();
 }
 
+//used passFunction so the function can be removed from the eventlistener later
 let passFunction;
 
 function startRace() {
